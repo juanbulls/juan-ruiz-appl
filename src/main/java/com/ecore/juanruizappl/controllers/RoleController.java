@@ -28,20 +28,20 @@ public class RoleController {
         return rolservice.getAll();
     }
 
-    @PostMapping("/role")
+    @PostMapping("/roles")
     public ResponseEntity<Role> saveRole(@RequestBody Role role) {
         Role new_role = rolservice.save(role);
         return new ResponseEntity<>(new_role, HttpStatus.CREATED);
     }
 
-    @GetMapping("/role/{id}")
+    @GetMapping("/roles/{id}")
     public ResponseEntity<Role> getRoleId(@PathVariable Integer id) {
         Role roleById = rolservice.getById(id);
 
         return ResponseEntity.ok(roleById);
     }
 
-    @PutMapping("/role/{id}")
+    @PutMapping("/roles/{id}")
     public ResponseEntity<Role> update(@PathVariable Integer id, @RequestBody Role role) {
         Role roleById = rolservice.getById(id);
         roleById.setRole(role.getRole());
