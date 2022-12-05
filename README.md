@@ -17,7 +17,7 @@
 ## Api Documentation
 This api have 2 endpoints: roles and memberships
 ### Roles methods:
-In order to create new roles (first requirment of the application), post method can be used. Additionally methods where added.
+In order to create new roles (first requirment of the application), post method can be used. Additionally methods where added.  
 **POST** and **PUT** methods require body detailed at the end.
 ```http
 GET localhost:8080/api/roles
