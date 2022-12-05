@@ -19,7 +19,7 @@ The API have a lot of methods, but to the especific challenge requirementes:
  - "Create new role" use the Roles POST method
  - "Assign a rol to a team member" use the Memberships POST method
  - "Look up a role for a membership" use the Membership GET method indicating the id
- - "Look up memberships for a role" 
+ - "Look up memberships for a role"  use the Role-Memberships GET method
 
 ## Api Documentation
 This api have 2 endpoints: roles and memberships
@@ -56,6 +56,9 @@ GET localhost:8080/api/memberships/{id}
 ```
 ```http
 PUT localhost:8080/api/memberships/{id}
+```
+```http
+GET localhost:8080/api/role-member/{role}
 ```
 Body:
 ```javascript
