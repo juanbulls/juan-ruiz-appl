@@ -2,7 +2,8 @@
  Juan Ruiz ecore application
 
 ### Prerequisites 
- - Install docker version 4
+ - Docker version 4
+ - Gradle
 
 ## Install Application:
  - start the mysql docker container:
@@ -29,4 +30,4 @@ INSERT INTO `ecore`.`role` (`role`) VALUES ('Tester');
  ```
  gradlew bootRun
  ```
- 
+
