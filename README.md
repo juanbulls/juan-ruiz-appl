@@ -13,3 +13,31 @@
  ```
  gradlew bootRun
  ```
+ 
+## Api Documentation
+This api have 2 endpoints: roles and memberships
+ - Roles methods:
+```http
+GET localhost:8080/api/roles
+```
+```http
+POST localhost:8080/api/roles
+```
+Body:
+```javascript
+{
+  "role" : string
+}
+```
+```http
+GET localhost:8080/api/roles/{id}
+```
+```http
+PUT localhost:8080/api/roles/{id}
+```
+Body:
+```javascript
+{
+  "role" : string
+}
+```
