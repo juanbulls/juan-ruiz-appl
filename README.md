@@ -18,7 +18,7 @@
 This api have 2 endpoints: roles and memberships
 ### Roles methods:
 In order to create new roles (first requirment of the application), post method can be used. Additionally methods where added.
-```http
+- ```http
 GET localhost:8080/api/roles
 ```
 ```http
