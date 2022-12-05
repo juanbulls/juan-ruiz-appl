@@ -6,3 +6,10 @@ CREATE TABLE `ecore`.`role` (
 INSERT INTO `ecore`.`role` (`role`) VALUES ('Developer');
 INSERT INTO `ecore`.`role` (`role`) VALUES ('Product Owner');
 INSERT INTO `ecore`.`role` (`role`) VALUES ('Tester');
+
+CREATE TABLE `ecore`.`membership` (
+  `membershipid` INT NOT NULL AUTO_INCREMENT,
+  `userid` VARCHAR(45) NULL,
+  `teamid` VARCHAR(45) NULL,
+  `role` VARCHAR(45) NULL,
+  PRIMARY KEY (`membershipid`));

@@ -1,5 +1,4 @@
 # juan-ruiz-appl
- Juan Ruiz ecore application
 
 ### Prerequisites 
  - Docker version 4
@@ -10,7 +9,7 @@
    ```
    docker-compose up
    ``` 
- - In other terminal, run the gradle application
+ - In other terminal, run the gradle application:
  ```
  gradlew bootRun
  ```
