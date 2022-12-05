@@ -28,5 +28,10 @@ public class MembershipServiceImpl implements IMembershipService{
     public Membership getById(Integer membershipid) {
         return membershiprepo.findById(membershipid).orElse(null);
     }
+
+    public List<Membership> getMembershipsByRole(String role) {
+        List<Membership> memberships = membershiprepo.findAllByRole(role);
+        return memberships;
+    }
     
 }

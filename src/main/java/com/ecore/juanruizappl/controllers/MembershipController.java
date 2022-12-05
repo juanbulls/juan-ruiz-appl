@@ -16,6 +16,7 @@ import com.ecore.juanruizappl.services.MembershipServiceImpl;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api")
 public class MembershipController {
@@ -51,4 +52,10 @@ public class MembershipController {
         Membership updated_rol = membershipservice.save(membershipById);
         return new ResponseEntity<>(updated_rol, HttpStatus.CREATED);
     }
+
+    @GetMapping("role-memberships/{role}")
+    public List<Membership> getMembershipsByRole(@PathVariable String role) {
+        return membershipservice.getMembershipsByRole(role);
+    }
+    
 }
