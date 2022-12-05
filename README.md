@@ -46,26 +46,22 @@ Body:
 ### Memberships methods:
 In order to assign a new rol to a member, the post mehtod below can be used (this is the second requirement of the application).
 ```http
-GET localhost:8080/api/roles
+GET localhost:8080/api/memberships
 ```
 ```http
-POST localhost:8080/api/roles
+POST localhost:8080/api/memberships
+```
+```http
+GET localhost:8080/api/memberships/{id}
+```
+```http
+PUT localhost:8080/api/memberships/{id}
 ```
 Body:
 ```javascript
 {
-  "role" : string
-}
-```
-```http
-GET localhost:8080/api/roles/{id}
-```
-```http
-PUT localhost:8080/api/roles/{id}
-```
-Body:
-```javascript
-{
-  "role" : string
+    "user": "Daniel",
+    "team": "Polaris",
+    "role": "Tester"
 }
 ```
