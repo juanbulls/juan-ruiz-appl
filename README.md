@@ -23,13 +23,7 @@ GET localhost:8080/api/roles
 ```
 ```http
 POST localhost:8080/api/roles
-```
-Body:
-```javascript
-{
-  "role" : string
-}
-```
+``` **Body Required**
 ```http
 GET localhost:8080/api/roles/{id}
 ```
