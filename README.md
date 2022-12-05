@@ -58,7 +58,7 @@ GET localhost:8080/api/memberships/{id}
 PUT localhost:8080/api/memberships/{id}
 ```
 ```http
-GET localhost:8080/api/role-member/{role}
+GET localhost:8080/api/role-memberships/{role}
 ```
 Body:
 ```javascript
