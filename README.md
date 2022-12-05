@@ -43,8 +43,8 @@ Body:
   "role" : string
 }
 ```
-### Memberships methods:
-In order to assign a new rol to a member, the post mehtod below can be used (this is the second requirement of the application).
+### Memberships methods:  
+**POST** and **PUT** methods require body detailed at the end.
 ```http
 GET localhost:8080/api/memberships
 ```
