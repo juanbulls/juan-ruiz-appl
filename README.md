@@ -14,6 +14,13 @@
     gradlew bootRun
     ```
  
+## Ecore - Tempo - Coding Challenge
+The API have a lot of methods, but to the especific challenge requirementes:
+ - "Create new role" use the Roles POST method
+ - "Assign a rol to a team member" use the Memberships POST method
+ - "Look up a role for a membership" use the Membership GET method indicating the id
+ - "Look up memberships for a role" 
+
 ## Api Documentation
 This api have 2 endpoints: roles and memberships
 ### Roles methods:
