@@ -17,31 +17,31 @@ import com.ecore.juanruizappl.services.RoleServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/roles")
 public class RoleController {
     
     @Autowired
     RoleServiceImpl rolservice;
 
-    @GetMapping("/roles")
+    @GetMapping("")
     public List<Role> getRoles() {
         return rolservice.getAll();
     }
 
-    @PostMapping("/roles")
+    @PostMapping("")
     public ResponseEntity<Role> saveRole(@RequestBody Role role) {
         Role new_role = rolservice.save(role);
         return new ResponseEntity<>(new_role, HttpStatus.CREATED);
     }
 
-    @GetMapping("/roles/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Role> getRoleId(@PathVariable Integer id) {
         Role roleById = rolservice.getById(id);
 
         return ResponseEntity.ok(roleById);
     }
 
-    @PutMapping("/roles/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Role> update(@PathVariable Integer id, @RequestBody Role role) {
         Role roleById = rolservice.getById(id);
         roleById.setRole(role.getRole());

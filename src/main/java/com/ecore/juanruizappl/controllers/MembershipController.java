@@ -17,31 +17,31 @@ import com.ecore.juanruizappl.services.MembershipServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/memberships")
 public class MembershipController {
         
     @Autowired
     MembershipServiceImpl membershipservice;
 
-    @GetMapping("/memberships")
+    @GetMapping("")
     public List<Membership> getMemberships() {
         return membershipservice.getAll();
     }
 
-    @PostMapping("/memberships")
+    @PostMapping("")
     public ResponseEntity<Membership> saveMembership(@RequestBody Membership membership) {
         Membership new_membership = membershipservice.save(membership);
         return new ResponseEntity<>(new_membership, HttpStatus.CREATED);
     }
 
-    @GetMapping("/memberships/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Membership> getMembershipId(@PathVariable Integer id) {
         Membership membershipById = membershipservice.getById(id);
 
         return ResponseEntity.ok(membershipById);
     }
 
-    @PutMapping("/memberships/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Membership> update(@PathVariable Integer id, @RequestBody Membership membership) {
         Membership membershipById = membershipservice.getById(id);
         membershipById.setUser(membership.getUser());
