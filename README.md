@@ -10,9 +10,9 @@
    docker-compose up
    ``` 
  - In other terminal, run the gradle application:
- ```
- gradlew bootRun
- ```
+    ```
+    gradlew bootRun
+    ```
  
 ## Api Documentation
 This api have 2 endpoints: roles and memberships
